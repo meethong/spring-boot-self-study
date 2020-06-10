@@ -24,31 +24,6 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
-        <dependency>
-            <groupId>com.kingbase8</groupId>
-            <artifactId>kingbase8</artifactId>
-            <version>8.2.0.jre7</version>
-            <scope>system</scope>
-            <systemPath>E:\work\时代亿信\时代亿信\适配中心\邮件4.0\金仓8\kingbase8-8.2.0.jre7.jar</systemPath>
-        </dependency>
-
-        <dependency>
-            <groupId>com.oscar</groupId>
-            <artifactId>oscarJDBC</artifactId>
-            <version>1.6.0_32-b05</version>
-            <scope>system</scope>
-            <systemPath>E:\work\时代亿信\时代亿信\适配中心\邮件4.0\神通7\oscarJDBC-1.6.0_32-b05.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>dm.jdbc</groupId>
-            <artifactId>dm</artifactId>
-            <version>JdbcDriver16</version>
-            <scope>system</scope>
-            <systemPath>E:\work\时代亿信\时代亿信\适配中心\商密防护\达梦\驱动\Dm7JdbcDriver16.jar</systemPath>
-        </dependency>
-
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
