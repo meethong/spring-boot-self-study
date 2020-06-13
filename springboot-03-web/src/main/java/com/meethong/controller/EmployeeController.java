@@ -18,19 +18,21 @@ public class EmployeeController {
     private EmployeeDao employeeDao;
     @Autowired
     private DepartmentDao departmentDao;
+
     //查询所有用户，返回列表页面
     @GetMapping("/emplist")
-    public String list(Model model){
-        Collection<Employee> employees=employeeDao.getAll();
+    public String list(Model model) {
+        Collection<Employee> employees = employeeDao.getAll();
         //将结果放在请求中
-        model.addAttribute("emps",employees);
+        model.addAttribute("emps", employees);
         return "emp/list.html";
     }
+
     @GetMapping("/add")
-    public String toAdd(Model model){
+    public String toAdd(Model model) {
         //查出所有的部门 提供选择
-        Collection<Department>  departments=departmentDao.getDepartments();
-        model.addAttribute("departments",departments);
+        Collection<Department> departments = departmentDao.getDepartments();
+        model.addAttribute("departments", departments);
         return "/add.html";
     }
 }

@@ -11,19 +11,21 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MyWebMvcConfig implements WebMvcConfigurer {
     //注册拦截器，拦截请求 放行请求
     @Override
-     public void addInterceptors(InterceptorRegistry registry){
-         registry.addInterceptor(new MyHandlerInterceptor())
-                       .addPathPatterns("/**")
-                       .excludePathPatterns("/","/index.html","/login","/css/**","/js/**","/img/**");
-     }
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new MyHandlerInterceptor())
+                      .addPathPatterns("/**")
+                      .excludePathPatterns("/", "/index.html", "/login", "/css/**", "/js/**", "/img/**");
+    }
+
     @Override
-    public void addViewControllers(ViewControllerRegistry registry){
+    public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/index.html").setViewName("index");
         registry.addViewController("/main.html").setViewName("main");
     }
+
     @Bean
-    public LocaleResolver localeResolver(){
+    public LocaleResolver localeResolver() {
         return new MyLocaleResolver();
     }
 
