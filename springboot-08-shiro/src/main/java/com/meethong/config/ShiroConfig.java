@@ -32,7 +32,7 @@ public class ShiroConfig {
         fileterMap.put("/user/add","perms[liaoh]");
         fileterMap.put("/user/update","perms[root]");
         fileterMap.put("/user/*","authc");
-        
+
         //设置登陆的请求
         bean.setLoginUrl("/login");
         //未授权页面
@@ -40,7 +40,6 @@ public class ShiroConfig {
         bean.setFilterChainDefinitionMap(fileterMap);
         return  bean;
     }
-
 
     // DefaultWebSecurityManager 2
     @Bean(name = "securityManager")

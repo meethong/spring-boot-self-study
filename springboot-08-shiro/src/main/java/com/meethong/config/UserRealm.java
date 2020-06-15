@@ -25,7 +25,6 @@ public class UserRealm extends AuthorizingRealm {
         User currentUser= (User) subject.getPrincipal();
         //设置当前用户的权限
         info.addStringPermission(currentUser.getPerms());
-        System.out.println(info);
         return info;
     }
 
