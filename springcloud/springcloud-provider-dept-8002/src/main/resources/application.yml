@@ -1,0 +1,28 @@
+server:
+  port: 8002
+#Mybatis 配置
+mybatis:
+  type-aliases-package: com.meethong.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location:  classpath:mybatis/mybatis-config.xml
+#Spring的配置
+spring:
+  application:
+    name: test
+  datasource:
+    username: root
+    password: root
+    #?serverTimezone=UTC解决时区的报错
+    url: jdbc:mysql://localhost:3306/mybatis2?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+  instance:
+    instance-id: meethong2 #修改默认eureka的默认描述信息
+
+info:
+  app.name: meethong-springcloud
+  company.name: blog.opsta.cn
